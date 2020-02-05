@@ -1,0 +1,29 @@
+
+
+
+<!-- Input mask -->
+<mat-form-field class="example-full-width" style="padding: 12px;">
+<input  matInput appCurrency="custom"  [(ngModel)]='testField' (blur)="onblur()"> 
+</mat-form-field>
+<div>
+  Input 1: {{testField}}
+</div>
+<!-- ng2Currency -->
+<mat-form-field class="example-full-width" style="padding: 12px;">
+
+<input  matInput  currencyMask  [(ngModel)]='testField2' (blur)="onblur2()">
+</mat-form-field>
+
+<div>
+  Input 2: {{testField2}}
+</div>
+
+
+
+
+
+<!-- <input inputMask mask='999-AAA' type='text' [(ngModel)]='inputMaskTesting'>
+
+<div>
+  {{inputMaskTesting}}
+</div> -->
