@@ -20,16 +20,17 @@ export class CurrencyDirective {
   @Input("appCurrency")
   public set defineInputType(type: string) {
     Inputmask('decimal',{
-      // regex: this.regexMap[type],
-      alias:"decimal",
-      placeholder: "",
+      regex: this.regexMap[type],
+      // alias:"decimal",
+      // // placeholder: "",
       rightAlign: false,
-      radixPoint: ",",
-      autoGroup: true,
-      groupSeparator: " ",
-      groupSize: 3,
-      integerDigits: 0,
-      digits: 10,
+      // radixPoint: ",",
+      // // radixSeparator:",",
+      // autoGroup: false,
+      // groupSeparator: " ",
+      // groupSize: 3,
+      // integerDigits: 0,
+      // digits: 10,
       autoUnmask:true,
       unmaskAsNumber : true
       

@@ -8,14 +8,14 @@ import { AppComponent } from './app.component';
 import { CurrencyMaskModule } from "ng2-currency-mask";
 import { CurrencyMaskConfig, CURRENCY_MASK_CONFIG } from "ng2-currency-mask/src/currency-mask.config";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgxMaskModule } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask';
 import { TextMaskModule } from 'angular2-text-mask';
 import { CurrencyDirective } from './currency.directive';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatSelectModule} from '@angular/material/select';
+import { RestrictDirective } from './restrict.directive';
 
 // export const options: Partial<IConfig> | (() => Partial<IConfig>);
 export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
@@ -30,7 +30,8 @@ export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    CurrencyDirective
+    CurrencyDirective,
+    RestrictDirective
   ],
   imports: [
     BrowserModule,
@@ -38,13 +39,14 @@ export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
     CurrencyMaskModule,
     FormsModule,
     // InputMaskModule,
-    NgxMaskModule,
+    NgxMaskModule.forRoot(),
     TextMaskModule,
     // InputMaskModule
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [
     { provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig }
