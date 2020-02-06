@@ -9,8 +9,10 @@ export class AppComponent {
   title = "test";
   testField;
   testField2;
-  ;
-  
+  disableSelect = new FormControl(false);
+  toppings = new FormControl();
+
+  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
  
 
   onblur() {
