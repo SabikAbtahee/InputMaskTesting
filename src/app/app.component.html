@@ -49,7 +49,7 @@
 
 
 
-
+<div>HELLOW WORLD</div>
 
 <form [formGroup]="insureForm">
 
@@ -60,7 +60,7 @@
 
   <mat-form-field  >
     <input id="myText" matInput 
-      autocomplete="PremiumAmount" mask="separator.5" decimalMarker=','   thousandSeparator=" " restrict formControlName="PremiumAmount" >
+      autocomplete="off" restrict mask="separator.5" decimalMarker=','   thousandSeparator=" "  formControlName="PremiumAmount" >
   </mat-form-field>
 
   {{insureForm.value.PremiumAmount}}

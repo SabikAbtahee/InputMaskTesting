@@ -53,16 +53,16 @@ export class AppComponent implements OnInit {
       ]
     });
 
-    setInterval(() => {
-      console.log(this.insureForm.value.PremiumAmount);
-      console.log(typeof this.insureForm.value.PremiumAmount);
-    }, 3000);
+    // setInterval(() => {
+    //   console.log(this.insureForm.value.PremiumAmount);
+    //   console.log(typeof this.insureForm.value.PremiumAmount);
+    // }, 3000);
   }
 
-  omit_special_char(event) {
-    var k;
-    k = event.charCode; //         k = event.keyCode;  (Both can be used)
-    console.log(k);
-    return (k==44 || (k>=48 && k<=57));
-  }
+  // omit_special_char(event) {
+  //   var k;
+  //   k = event.charCode; //         k = event.keyCode;  (Both can be used)
+  //   console.log(k);
+  //   return (k==44 || (k>=48 && k<=57));
+  // }
 }
